@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 01 Nov 2024 pada 03.02
+-- Waktu pembuatan: 01 Nov 2024 pada 07.43
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cimahi`
+-- Database: `marketplace_katering`
 --
 
 -- --------------------------------------------------------
@@ -138,10 +138,8 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `user_id`, `name`, `deskripsi`, `harga`, `image`, `created_at`, `updated_at`) VALUES
-(13, 11, 'Mie Dower', 'Mie Dower', 150000, 'image-product/JshawGokvwJLQVK4oXLejZmJCiGrwVpBCD0FUyKj.jpg', '2024-10-30 04:23:59', '2024-10-30 04:23:59'),
-(14, 11, 'Ayam Geprek', 'Ayam geprek', 200000, 'image-product/u7s0gp9RM5HsHQ3E5NNDnorNIVznOlMa96JGV3SZ.jpg', '2024-10-30 04:30:47', '2024-10-30 04:30:47'),
-(15, 11, 'Sambal', 'Sambal', 100000, 'image-product/i8DtqvgU6FIEIeZoomMeQSrbwvbjKMjyE7LAhnIU.jpg', '2024-10-30 04:49:04', '2024-10-30 05:12:59'),
-(16, 12, 'Bakar Bakar', 'Bakar Bakar', 200000, 'image-product/0DGioAxGKkk9ExaRhKWDcHTb3DZvqyVwNAuTv0c0.jpg', '2024-10-30 23:21:06', '2024-10-30 23:21:06');
+(15, 11, 'Ayam Geprek', 'Ayam geprek', 15000, 'image-product/woIy1gaD3AfCIMDL9HsewmQcyL6veAJEZboZfk1Q.jpg', '2024-10-30 04:49:04', '2024-10-31 23:38:03'),
+(17, 12, 'Sayuran', 'Sayuran', 20000, 'image-product/ZBhvimgnxRBVOArSCrI2VUsVFCI93PiY8ge6aowI.jpg', '2024-10-31 23:41:59', '2024-10-31 23:41:59');
 
 -- --------------------------------------------------------
 
@@ -192,13 +190,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `role`, `email`, `password`, `name`, `no_hp`, `alamat`, `image`, `email_verified_at`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 2, 'admin@gmail.com', '$2y$10$AiZOHPXqCupZ1uyCtRGN5.MRXkqzTnHXVfr.6imFvGWxhkB2Mp2X6', 'Admin', 0, '', '', NULL, NULL, '2022-02-08 00:53:15', '2024-10-31 18:58:45'),
-(2, 0, 'asmadi96@gmail.com', '$2y$10$p9H.uowRTEv4bsmWGzXQWe9f501.Uuse0f0M/vQbsSiNIomiKB4Nu', 'Ira Laksita', 0, '', '', '2022-02-08 00:53:16', 'gAVaycR57G', '2022-02-08 00:53:16', '2022-02-17 19:34:29'),
-(3, 0, 'fsudiati@gmail.com', '$2y$10$59zStDUhNxXuozXLHc.LGe9tvYPV83yG4bQn7lmROjoCl0YTro.TG', 'Argono Slamet Pradipta S.Sos', 0, '', '', '2022-02-08 00:53:16', 'aR54JR8tJ9', '2022-02-08 00:53:16', '2022-02-17 19:34:44'),
-(4, 0, 'farah32@gmail.com', '$2y$10$dnhdbDye8SPT9kQe/I1s.uAbc98cukrbf7.JRvN5AoQuHs.Yx8tpi', 'Hasta Mustofa S.Gz', 0, '', '', '2022-02-08 00:53:16', 'zBIKbenMsk', '2022-02-08 00:53:16', '2022-02-17 19:34:55'),
-(5, 1, 'ella.prayoga@gmail.com', '$2y$10$s6HMEkw0IfxZ5ptoljiPx.zgObWtxGRjYceTfM1/HNeirklacmAdi', 'Yessi Pertiwi', 0, '', '', '2022-02-08 00:53:16', 'hBEdkv7hrxeDqVKHFSy1y1ZMcgujfQ5iAiybPd3prqBzELa2bUmoQFvYEQ8y', '2022-02-08 00:53:16', '2022-02-17 17:42:11'),
 (10, 0, 'wahyudhinugroho31@gmail.com', '$2y$10$pTSRRcKrHX.XdGht4GIOrOm5Fnq.IPR.svVnbB1wDUcuaa6HHImUy', 'Politeknik TEDC', 89503588488, 'Jl Baros Utama No 15', 'image-user/J3fWVJ4FKCUSXAycQIMWesQ3LVDknmpSCYS0VZLt.jpg', NULL, NULL, '2024-10-29 21:23:00', '2024-10-31 18:51:36'),
-(11, 1, 'wahyudhinugroho@gmail.com', '$2y$10$LEDLTovXiNEEdrF2azQz5.8j2ZuPAeSacfwhNOFgEbin3TOCsoUD2', 'WAN FOOD', 89503588488, 'Jl Baros Utama No 15', 'image-user/UdfEkAveuvDAivHYBZJqp5ef5j0tyz2FOdpHpJf4.jpg', NULL, NULL, '2024-10-30 00:34:42', '2024-10-31 08:27:04'),
-(12, 1, 'wahyudhi@gmail.com', '$2y$10$N6CyfuTDNJW2cdRU9lXAIe91FEAnjukexkG9emUvWdLLVzcm67czi', 'ASEK SPOT', 89503588488, 'Jl Cibeber No 15', 'image-user/UljKNoGNoR5f1yjnd8pChUK4od8nx1LNa0mqXDmY.jpg', NULL, NULL, '2024-10-30 23:14:48', '2024-10-31 08:31:11');
+(11, 1, 'wahyudhinugroho@gmail.com', '$2y$10$XCwpBkpyk2DaTYUzPccF8.WgjLZeLhLzOCMM/t9sbQcX1zlhM67kC', 'WAN FOOD', 89503588488, 'Jl Baros Utama No 15', 'image-user/UdfEkAveuvDAivHYBZJqp5ef5j0tyz2FOdpHpJf4.jpg', NULL, NULL, '2024-10-30 00:34:42', '2024-10-31 23:29:15'),
+(12, 1, 'wahyudhi@gmail.com', '$2y$10$wnzMcnSuyX6/uUgm/CXBx.aPj1.nvAKgeC66Quo6miHPic2qZc2Ue', 'ASEK SPOT', 89503588488, 'Jl Cibeber No 15', 'image-user/UljKNoGNoR5f1yjnd8pChUK4od8nx1LNa0mqXDmY.jpg', NULL, NULL, '2024-10-30 23:14:48', '2024-10-31 23:38:24');
 
 --
 -- Indexes for dumped tables
@@ -285,7 +279,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT untuk tabel `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT untuk tabel `profils`
